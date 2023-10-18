@@ -4,13 +4,16 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-langchain = "==0.0.237"
+langchain = "*"
 transformers = "==4.31.0"
 auto-gptq = "==0.3.0"
 gradio = "==3.37.0"
 llama-cpp-python = "==0.1.73"
 fire = "==0.5.0"
 huggingface-hub = "*"
+black = "*"
+linkedin-api = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
