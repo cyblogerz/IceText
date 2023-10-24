@@ -1,7 +1,4 @@
 from langchain.utilities import SerpAPIWrapper
-from dotenv import load_dotenv
-import os
-
 
 
 class CustomSerpAPIWrapper(SerpAPIWrapper):

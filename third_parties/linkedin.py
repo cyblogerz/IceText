@@ -22,6 +22,13 @@ def scrape_linkedin_profile(linked_in_url: str):
     data = {
         k: v
         for k, v in data.items()
-        if v not in ([], "", "", None) and k not in ["certifciations"]
+        if v not in ([], "", "", None) 
     }
-    return data
+    keys_to_keep = ['industryName','firstName', 'lastName', 'locationName', 'student', 'education', 'experience','projects']
+    relevant_data = {key: data[key] for key in keys_to_keep if key in data}
+    print(f"length:{len(relevant_data)}")
+    print(type(relevant_data))
+    print(relevant_data.keys())
+    print(relevant_data)
+    
+    return relevant_data
