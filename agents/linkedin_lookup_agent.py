@@ -1,20 +1,25 @@
-from langchain.prompts import PromptTemplate
-from langchain.chat_models import ollama
+from langchain import PromptTemplate
+from langchain.chat_models import ChatOpenAI
 
 from langchain.agents import initialize_agent, Tool, AgentType
 
+from tools.tools import get_profile_url
+
+from dotenv import load_dotenv
+import os
 
 def lookup(name: str) -> str:
-    llm = ollama(model="llama2", temperature=0)
-    template = """given the full name {name_of_person} I want you to get it me the username of their Linkedin profile page.
-    your answer should only contain a word
-    """  # end we give the output indicator
+    load_dotenv()
+    
+    llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo",openai_api_key=os.getenv("OPENAI_API_KEY"))
+    template = """given the full name {name_of_person} I want you to get it me a link to their Linkedin profile page.
+                          Your answer should contain only a URL"""
 
     tools_for_agent = [
-        Tool.from_function(
+        Tool(
             name="Crawl Google 4 linkedin profile page",
-            func=(),
-            description="useful for when you need to get the Linkedin username",
+            func=get_profile_url,
+            description="useful for when you need get the Linkedin Page URL",
         )
     ]
 
@@ -28,5 +33,5 @@ def lookup(name: str) -> str:
         template=template, input_variables=["name_of_person"]
     )
 
-    linkedin_profile_id = agent.run(prompt_template.format_prompt(name_of_person=name))
-    return linkedin_profile_id
+    linked_profile_url = agent.run(prompt_template.format_prompt(name_of_person=name))
+    return linked_profile_url

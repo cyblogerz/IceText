@@ -14,6 +14,8 @@ huggingface-hub = "*"
 black = "*"
 linkedin-api = "*"
 python-dotenv = "*"
+google-search-results = "*"
+openai = "*"
 
 [dev-packages]
 

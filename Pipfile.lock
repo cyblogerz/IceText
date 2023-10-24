@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "6866222da91eb3494dc36a26bc2317faee6f8d76c899c27be0b3696c9542e23e"
+            "sha256": "33959658a318526849456326e42dbd320afe7d850280691b5e02b1a3330c6f8b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -587,6 +587,14 @@
             "markers": "python_version >= '3.8'",
             "version": "==2023.6.0"
         },
+        "google-search-results": {
+            "hashes": [
+                "sha256:603a30ecae2af8e600b22635757a6df275dad4b934f975e67878ccd640b78245"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.5'",
+            "version": "==2.4.2"
+        },
         "gradio": {
             "hashes": [
                 "sha256:183440d6ca8b8a08f38ec660c2499173771986d76562dafb23c0508680e7c3d0",
@@ -797,20 +805,20 @@
         },
         "langchain": {
             "hashes": [
-                "sha256:bca76a7d9fbf18bc284b1bf8884c3a88c8f17dc8168ba2123132033b0efdd8df",
-                "sha256:c0e0e835e749d62af86340a3e07fb10d65c9e0c8f66a2d443cded81dbb85835a"
+                "sha256:53e32b581a8a0215a78086bc19725ef287a4daf4009733dfc9995d657433291c",
+                "sha256:e2dee9779583220d4031307f54169ac65fe23b81cb425756d54dce1277aef4ba"
             ],
             "index": "pypi",
             "markers": "python_version < '4.0' and python_full_version >= '3.8.1'",
-            "version": "==0.0.317"
+            "version": "==0.0.320"
         },
         "langsmith": {
             "hashes": [
-                "sha256:65a9f22ff504fa6b62236e3fdaae9060c30ae14ed9b6d1945837a4695e8bfeea",
-                "sha256:9ca35719fab7caf3367bc0fcd636c670c83edbf0fe9de5c7a38bf37767fd62f0"
+                "sha256:020d9515be277c26b16c1f576e466559766a64652cf9f50eb8b8879cc823f3c7",
+                "sha256:4e51edf71337bd8cbe008f347f96bf8ca85c3281ea617db62e4c33333fc6b01e"
             ],
             "markers": "python_version < '4.0' and python_full_version >= '3.8.1'",
-            "version": "==0.0.46"
+            "version": "==0.0.49"
         },
         "linkedin-api": {
             "hashes": [
@@ -1187,11 +1195,11 @@
         },
         "networkx": {
             "hashes": [
-                "sha256:4f33f68cb2afcf86f28a45f43efc27a9386b535d567d2127f8f61d51dec58d36",
-                "sha256:de346335408f84de0eada6ff9fafafff9bcda11f0a0dfaa931133debb146ab61"
+                "sha256:8b25f564bd28f94ac821c58b04ae1a3109e73b001a7d476e4bb0d00d63706bf8",
+                "sha256:bda29edf392d9bfa5602034c767d28549214ec45f620081f0b74dc036a1fbbc1"
             ],
-            "markers": "python_version >= '3.8'",
-            "version": "==3.1"
+            "markers": "python_version >= '3.9'",
+            "version": "==3.2"
         },
         "numpy": {
             "hashes": [
@@ -1230,6 +1238,15 @@
             ],
             "markers": "python_version < '3.13' and python_version >= '3.9'",
             "version": "==1.26.1"
+        },
+        "openai": {
+            "hashes": [
+                "sha256:4be1dad329a65b4ce1a660fe6d5431b438f429b5855c883435f0f7fcb6d2dcc8",
+                "sha256:d18690f9e3d31eedb66b57b88c2165d760b24ea0a01f150dd3f068155088ce68"
+            ],
+            "index": "pypi",
+            "markers": "python_full_version >= '3.7.1'",
+            "version": "==0.28.1"
         },
         "orjson": {
             "hashes": [
