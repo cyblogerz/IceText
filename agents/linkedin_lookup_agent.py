@@ -8,10 +8,15 @@ from tools.tools import get_profile_url
 from dotenv import load_dotenv
 import os
 
+
 def lookup(name: str) -> str:
     load_dotenv()
-    
-    llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo",openai_api_key=os.getenv("OPENAI_API_KEY"))
+
+    llm = ChatOpenAI(
+        temperature=0,
+        model_name="gpt-3.5-turbo",
+        openai_api_key=os.getenv("OPENAI_API_KEY"),
+    )
     template = """given the full name {name_of_person} I want you to get it me a link to their Linkedin profile page.
                           Your answer should contain only a URL"""
 
