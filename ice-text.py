@@ -5,9 +5,6 @@ from langchain.chains import LLMChain
 import os
 from dotenv import load_dotenv
 
-from langchain.callbacks.manager import CallbackManager
-from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
-
 from agents.linkedin_lookup_agent import lookup as linkedin_lookup_agent
 from third_parties.linkedin import scrape_linkedin_profile
 
